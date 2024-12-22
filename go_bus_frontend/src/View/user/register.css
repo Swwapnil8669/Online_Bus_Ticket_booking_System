@@ -1,0 +1,109 @@
+ /* Register page container */
+.register-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #f8f9fa; /* Light background */
+}
+
+/* Register card styling */
+.register-card {
+  background: #fff; /* White background */
+  padding: 2rem; /* Padding for spacing */
+  border-radius: 8px; /* Rounded corners */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Light shadow for depth */
+  width: 100%;
+  max-width: 600px; /* Wider card for horizontal layout */
+}
+
+/* Heading styling */
+.register-card .heading {
+  text-align: center;
+  font-size: 24px;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+/* Horizontal form layout using flex */
+.register-card .form-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px; /* Space between inputs */
+}
+
+.register-card .form-column {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  min-width: 200px; /* Ensure the inputs don't get too small */
+}
+
+.register-card .form-label {
+  font-size: 14px;
+  color: #555;
+  margin-bottom: 5px;
+}
+
+.register-card .form-control {
+  padding: 10px;
+  font-size: 14px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  margin-top: 5px;
+  box-sizing: border-box;
+}
+
+.register-card .form-control:focus {
+  border-color: #66afe9; /* Focused state border color */
+  outline: none; /* Remove outline */
+}
+
+ /* Button styling */
+.register-card .btn {
+  padding: 12px;
+  font-size: 16px;
+  font-weight: bold;
+  color: white;
+  background-color: #007bff; /* Primary blue button */
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  width: 100%; /* Full width for button */
+}
+
+.register-card .btn:hover {
+  background-color: #0056b3; /* Darker blue on hover */
+}
+
+.register-card .btn:focus {
+  outline: none;
+  background-color: #0056b3; /* Consistent focus state */
+}
+
+
+/* Links */
+.register-card a {
+  color: #007bff; /* Blue color for links */
+  text-decoration: none;
+}
+
+.register-card a:hover {
+  text-decoration: underline; /* Underline on hover */
+}
+
+/* Mobile responsiveness */
+@media (max-width: 576px) {
+  .register-card .form-row {
+    flex-direction: column; /* Stack inputs vertically on small screens */
+  }
+
+  .register-card .form-column {
+    min-width: 100%; /* Make inputs full-width on small screens */
+  }
+
+  .register-card {
+    width: 90%; /* Make card responsive on small screens */
+    padding: 1.5rem;
+  }
+}
