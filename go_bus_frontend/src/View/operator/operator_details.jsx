@@ -42,17 +42,18 @@ export function OperatorDetails() {
 
   const nextStep = () => {
     if (step < 2) {
-      setStep((prevStep) => prevStep + 1);
+      setStep(step + 1);
     }
   };
 
   const prevStep = () => {
     if (step > 0) {
-      setStep((prevStep) => prevStep - 1);
+      setStep(step- 1);
     }
   };
 
   return (
+    
     <div>
       <h1 className="d-flex justify-content-center">Registration</h1>
 
@@ -62,24 +63,46 @@ export function OperatorDetails() {
 
       <div className="d-flex justify-content-center mt-3">
         {step > 0 && (
+          <div className="container">
+            <div className="row">
+            <div className="col-6"></div>
+              <div className="col">
           <button className="btn btn-secondary me-2" onClick={prevStep}>
             Previous
           </button>
+          </div>
+          
+          </div>
+          </div>
         )}
 
         {step < 2 && (
+          <div className="container">
+            <div className="row">
+            <div className="col">
           <button className="btn btn-primary me-2" onClick={nextStep}>
             Next
           </button>
+          </div>
+          <div className="col-6"></div>
+          </div>
+          </div>
         )}
 
         {step === 2 && (
+           <div className="container">
+           <div className="row">
+           <div className="col">
           <button
             className="btn btn-success"
             onClick={handleSubmit}
           >
             Submit
           </button>
+          </div>
+          <div className="col-6"></div>
+          </div>
+          </div>
         )}
       </div>
     </div>
