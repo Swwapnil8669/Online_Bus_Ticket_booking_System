@@ -13,6 +13,7 @@ function Register() {
   const navigate = useNavigate();
 
   const onRegister = async () => {
+    navigate("/login");
     if (name.length === 0) {
       toast.error("Please enter your name");
     } else if (email.length === 0) {
@@ -24,7 +25,7 @@ function Register() {
     } else if (phone.length === 0) {
       toast.error("Please enter your phone number");
     } else {
-      // registration API call logic here
+       
     }
   };
 

@@ -23,7 +23,7 @@ function ForgotPassword() {
     } else if (newPassword !== confirmPassword) {
       toast.error("Passwords do not match");
     } else {
-      // Handle OTP verification and password reset logic
+       
       toast.success("Password reset successful");
        
     }
