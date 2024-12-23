@@ -4,7 +4,7 @@ export function BankDetails({bankDetails, setBankDetails}) {
  const handleChange = (e) => {
     const {name, value} = e.target;
     setBankDetails({
-        ...BankDetails,
+        ...bankDetails,
         [name]: value
     })
  }
