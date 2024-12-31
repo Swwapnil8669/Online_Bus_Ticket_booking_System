@@ -33,44 +33,41 @@ export function OperatorDetails() {
   });
 
   const validateStep = () => {
-    let isValid = true;
-
     if (step === 0) {
-      // Validate personal details
-      Object.keys(personalDetails).forEach((key) => {
+      // Validate personal details sequentially
+      for (const key of Object.keys(personalDetails)) {
         if (!personalDetails[key]) {
           toast.error(`Please fill in the ${key.replace(/([A-Z])/g, ' $1')}`, {
             position: "top-right",
             autoClose: 5000,
           });
-          isValid = false;
+          return false; // Stop validation on the first error
         }
-      });
+      }
     } else if (step === 1) {
-      // Validate bank details
-      Object.keys(bankDetails).forEach((key) => {
+      // Validate bank details sequentially
+      for (const key of Object.keys(bankDetails)) {
         if (!bankDetails[key]) {
           toast.error(`Please fill in the ${key.replace(/([A-Z])/g, ' $1')}`, {
             position: "top-right",
             autoClose: 5000,
           });
-          isValid = false;
+          return false; // Stop validation on the first error
         }
-      });
+      }
     } else if (step === 2) {
       // Validate GST details
-      
-      if ( gstDetails.hasGst === true && gstDetails.gstNumber.length === 0) {
+      if (gstDetails.hasGst === "true" && !gstDetails.gstNumber) {
         toast.error("Please enter the GST number", {
           position: "top-right",
           autoClose: 5000,
         });
-        isValid = false;
+        return false; // Stop validation
       }
     }
-
-    return isValid;
+    return true; // All validations passed
   };
+  
 
   const nextStep = () => {
     if (validateStep()) {
