@@ -1,14 +1,16 @@
 import React from "react";
 import { Navbar } from './../nvabar';
-import {BusSearch} from '../user/BusSearch';
+import Footer from "./Fotter";
+
 function Home() {
   return (
     <div>
       <Navbar/>
       <div>
-        <BusSearch/>
+        <Footer/>
       </div>
     </div>
+    
   
   );
 }
