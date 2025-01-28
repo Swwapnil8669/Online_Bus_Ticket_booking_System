@@ -167,7 +167,6 @@ function Filters() {
   );
 }
 
-<<<<<<< HEAD
 function BusBooking()
  {
     const [buses, setBuses] = useState([
@@ -191,7 +190,6 @@ function BusBooking()
           <div className="input-field">
             <label htmlFor="from">From</label><br/>
             <input type="text" id="from" />
-=======
 function BusBooking() {
   const [buses, setBuses] = useState([
     {
@@ -303,8 +301,9 @@ function BusBooking() {
       price: "$60",
       seats: Array(20).fill(false),
     },
+    
   ]);
-  return (
+return (
     <div className="">
       <div>
         <header>
@@ -312,7 +311,7 @@ function BusBooking() {
           <div>
             <a href="#">Contact Us</a>
             <a href="#">Login</a>
->>>>>>> 5699ce5e298359a9cf619189e88a0598182dc00b
+
           </div>
         </header>
       </div>
@@ -369,7 +368,7 @@ function BusBooking() {
         </div>
       </div>
     </div>
-  );
+  )];
 }
 
 export default BusBooking;
