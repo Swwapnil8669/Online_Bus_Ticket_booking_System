@@ -10,7 +10,7 @@ const BusSearch = () => {
           <span role="img" aria-label="From" className="icon">🚌</span>
           <div className="input-field">
             <label htmlFor="from">From</label><br/>
-            <input type="text" id="from" value="Swargate, Pune" readOnly/>
+            <input type="text" id="from" placeholder='Source'/>
           </div>
         </div>
         <div className="swap-icon">
@@ -20,14 +20,14 @@ const BusSearch = () => {
           <span role="img" aria-label="To" className="icon">🚌</span>
           <div className="input-field">
             <label htmlFor="to">To</label><br/>
-            <input type="text" id="to" value="Dhule Stadium&#10;Dhule" readOnly/>
+            <input type="text" id="to"  placeholder='Destination'/>
           </div>
         </div>
         <div className="input-group">
           <span role="img" aria-label="Date" className="icon">📅</span>
           <div className="input-field">
             <label htmlFor="date">Date</label><br/>
-            <input type="text" id="date" value="27 Jan&#10;2025" readOnly/>
+            <input type="date" id="date"  placeholder='Date'/>
           </div>
         </div>
         <button className="search-button">SEARCH BUSES</button>

@@ -1,6 +1,6 @@
 import React from "react";
 import { Navbar } from './../nvabar';
-import {BusSearch} from '../user/BusSearch';
+import BusSearch from './../user/BusSearch';
 function Home() {
   return (
     <div>
