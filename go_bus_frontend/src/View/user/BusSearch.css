@@ -1,0 +1,76 @@
+/* BusSearch.css */
+.bus-search-container {
+    background-color: #a5daf3;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 200px;
+  }
+  
+  .bus-search-form {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .input-group {
+    display: flex;
+    align-items: center;
+    margin-right: 20px;
+  }
+  
+  .icon {
+      margin-right: 5px;
+      font-size: 1.2em; /* Slightly larger icon */
+  }
+  
+  .input-field label {
+      font-size: 12px;
+  }
+  
+  .input-field input {
+      border: none;
+      outline: none;
+      font-size: 16px;
+      white-space: pre-wrap; /* For multiline text */
+  }
+  
+  .swap-icon {
+      display: flex;
+      align-items: center;
+      margin-right: 20px;
+      font-size: 1.2em;
+  }
+  
+  .search-button {
+    background-color: #a5daf3;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 16px;
+    white-space: nowrap; /* Prevent button text from wrapping */
+  }
+  
+  /* Responsive adjustments (Example) */
+  @media (max-width: 768px) { /* Adjust breakpoint as needed */
+    .bus-search-form {
+      flex-direction: column; /* Stack elements vertically on smaller screens */
+      align-items: stretch; /* Stretch items to full width */
+    }
+  
+    .input-group, .swap-icon {
+      margin: 10px 0; 
+      width: 100%; 
+    }
+    .input-field input {
+      width: 100%;
+      box-sizing: border-box; 
+    }
+  }
