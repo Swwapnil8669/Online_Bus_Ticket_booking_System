@@ -9,11 +9,11 @@ export function BankDetails({bankDetails, setBankDetails}) {
     })
  }
   return (
-    <div className="container mt-5">
+    <div className="container">
       <h4>Bank Details:</h4>
       <div className="d-flex justify-content-center">
         <div className="container">
-          <div className="mt-5">
+          <div className="">
             <div className="row justify-content-center">
               <div className="d-flex flex-column col-md-8">
                 <div className="form-group">
