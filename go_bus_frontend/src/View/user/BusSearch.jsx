@@ -1,8 +1,15 @@
 // BusSearch.jsx
 import React from 'react';
 import './BusSearch.css'; // Import the CSS file
+import { useNavigate } from 'react-router-dom';
 
 const BusSearch = () => {
+  const navigate = useNavigate();
+
+  const onSearch= async () => {
+    navigate("./BusBooking");
+  };
+
   return (
     <div className="bus-search-container">
       <div className="bus-search-form">
@@ -33,7 +40,7 @@ const BusSearch = () => {
             <input type="date" id="date"  placeholder='Date'/>
           </div>
         </div>
-        <button className="search-button">SEARCH BUSES</button>
+        <button className="search-button" onClick={onSearch}>SEARCH BUSES</button>
       </div>
     </div>
   );

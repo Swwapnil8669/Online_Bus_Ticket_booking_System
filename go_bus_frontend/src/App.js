@@ -7,7 +7,7 @@ import Home from "./View/Home/home";
 import ForgotPassword from "./View/user/forgot_password";
 import BusBooking from "./View/user/BusBooking";
 import BusSearch from "./View/user/BusSearch";
-import SelectSeat from "./View/user/SelectSeat";
+
 
 function App() {
   return (
@@ -20,7 +20,7 @@ function App() {
       <Route path="forgot-password" element ={<ForgotPassword/>}/>
       <Route path="BusBooking" element={<BusBooking/>}/>
       <Route path="BusSearch" element={<BusSearch/>}/>
-      <Route path="SelectSeat" element={<SelectSeat/>}/>
+
     </Routes>
   
     
