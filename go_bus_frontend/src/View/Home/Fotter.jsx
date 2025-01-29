@@ -52,8 +52,8 @@ const Footer = () => {
         </div>
       </div>
 
-      <div className="footer-bottom">
-        © 2025 GoBus India Pvt Ltd. All rights reserved
+      <div className="footer-bottom" style={{backgroundColor:"black",color:"white",width:"100%",}}>
+        <h6>© 2025 GoBus India Pvt Ltd. All rights reserved</h6>
       </div>
     </footer>
   );

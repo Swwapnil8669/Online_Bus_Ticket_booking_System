@@ -5,34 +5,7 @@ import { Navbar } from "../nvabar";
 import './BusBooking.css';
 function BusBooking() {
   const [buses, setBuses] = useState([
-    {
-      operator: "Operator A",
-      departure: "9:00 AM",
-      arrival: "5:00 PM",
-      price: "$50",
-      seats: Array(20).fill(false),
-    },
-    {
-      operator: "Operator A",
-      departure: "9:00 AM",
-      arrival: "5:00 PM",
-      price: "$50",
-      seats: Array(20).fill(false),
-    },
-    {
-      operator: "Operator B",
-      departure: "10:00 AM",
-      arrival: "6:00 PM",
-      price: "$60",
-      seats: Array(20).fill(false),
-    },
-    {
-      operator: "Operator A",
-      departure: "9:00 AM",
-      arrival: "5:00 PM",
-      price: "$50",
-      seats: Array(20).fill(false),
-    },
+   
     {
       operator: "Operator B",
       departure: "10:00 AM",
