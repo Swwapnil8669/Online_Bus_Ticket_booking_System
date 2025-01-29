@@ -8,6 +8,7 @@ import ForgotPassword from "./View/user/forgot_password";
 import BusBooking from "./View/user/BusBooking";
 import BusSearch from "./View/user/BusSearch";
 import SelectSeat from "./View/user/SelectSeat";
+import SeatBlock from "./View/Bus/SeatBlock";
 
 function App() {
   return (
@@ -21,6 +22,7 @@ function App() {
       <Route path="BusBooking" element={<BusBooking/>}/>
       <Route path="BusSearch" element={<BusSearch/>}/>
       <Route path="SelectSeat" element={<SelectSeat/>}/>
+      <Route path="seat" element={<SeatBlock/>}/>
     </Routes>
   
     
