@@ -27,13 +27,14 @@ function Home() {
           <source src="./background-video.mp4" type="video/mp4" />
           Your browser does not support the video tag.
         </video>
+
         </div>
         {/* Center the BusSearch component */}
         <div style={{ position: "relative", zIndex: 1, padding: "50px 20px" }}>
           <BusSearch />
         </div>
       </div>
-
+        
       
      <div className='fix-bottom' style={{ marginTop: "150px"}}>
       <Footer/>
