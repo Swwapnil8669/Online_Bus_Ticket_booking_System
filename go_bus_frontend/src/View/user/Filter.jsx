@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import './Filter.css';
 function Filters() {
     const [filterState, setFilterState] = useState({
       liveTracking: false,
@@ -34,7 +35,7 @@ function Filters() {
     };
   
     return (
-      <div className="filters-container grid grid-cols-[auto,1fr] gap-4 text-sm mt-4">
+      <div className="filters-container grid grid-cols-[auto,1fr] gap-4 text-sm mt-1" >
         <h2>Filters</h2>
         <div className="filter-group">
             

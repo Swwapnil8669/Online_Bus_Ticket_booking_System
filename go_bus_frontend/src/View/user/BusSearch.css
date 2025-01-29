@@ -3,14 +3,19 @@
     background-color: #a5daf3;
     padding: 20px;
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
     min-height: 200px;
+    width: 80%;
+    margin-left: 175px;
+    border-radius: 25px;
+    
+    
   }
-  
+
   .bus-search-form {
     background-color: white;
-    padding: 20px;
+    padding: 10px;
     border-radius: 8px;
     display: flex;
     align-items: center;
@@ -20,7 +25,11 @@
   .input-group {
     display: flex;
     align-items: center;
-    margin-right: 20px;
+    margin-right: 15px;
+  }
+  .input-field input
+  {
+    font-size: 20px;
   }
   
   .icon {
@@ -29,7 +38,7 @@
   }
   
   .input-field label {
-      font-size: 12px;
+      font-size: 20px;
   }
   
   .input-field input {
@@ -38,7 +47,11 @@
       font-size: 16px;
       white-space: pre-wrap; /* For multiline text */
   }
-  
+  .input-group
+  {
+    margin-right: 15px;
+  }
+
   .swap-icon {
       display: flex;
       align-items: center;
@@ -48,18 +61,18 @@
   
   .search-button {
     background-color: #a5daf3;
-    color: white;
-    padding: 10px 20px;
+    color: black;
+    padding: 8px 8px;
     border: none;
     border-radius: 5px;
-    cursor: pointer;
     font-weight: bold;
-    font-size: 16px;
-    white-space: nowrap; /* Prevent button text from wrapping */
+    font-size: 14px;
+    margin-left: 200px;
+    align-items: center;
   }
   
   /* Responsive adjustments (Example) */
-  @media (max-width: 768px) { /* Adjust breakpoint as needed */
+  @media (max-width: 100px) { /* Adjust breakpoint as needed */
     .bus-search-form {
       flex-direction: column; /* Stack elements vertically on smaller screens */
       align-items: stretch; /* Stretch items to full width */

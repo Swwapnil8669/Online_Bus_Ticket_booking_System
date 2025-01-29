@@ -1,128 +1,26 @@
-/* BusBooking.css */
-body {
-    font-family: sans-serif;
-    margin: 0;
-}
-
-header {
-    background-color:  #a5daf3;;
-    padding: 20px;
-    display: flex;
-    justify-content: space-between; /* Align logo and links to opposite ends */
-    align-items: center; /* Vertically center content */
-}
-
-header a {
-    color: white;
-    text-decoration: none;
-    margin-left: 10px; /* Space between links */
-}
-
-.bus-search-container {
-    background-color: white;
-    padding: 20px;
-    margin: 20px auto;
-    width: fit-content;
-    border-radius: 8px;
-    display: flex;
-    align-items: center;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-}
-
-.input-group {
-    display: flex;
-    align-items: center;
-    margin-right: 20px;
-}
-
-main {
-    display: flex;
-    margin: 20px; /* Add margin around the main content */
-    flex-wrap: wrap; /* Allow wrapping on smaller screens */
-}
-
-.filters {
-    width: 250px; /* Fixed width for filters */
-    border: 1px solid #ddd;
-    border-radius: 5px;
-    box-sizing: border-box; /* Include padding and border in width */
-    margin-right: 20px; /* Space between filters and results */
-    margin-top: -200px;
-    
-}
-.filters-container{
-    border: none;
-}
-.filter-group h4 {
-    margin-bottom: 5px;
-    color: #333;
-}
-.filter-item {
-    display: flex;
-    align-items: center;
-    margin-bottom: 3px;
-}
-.filter-item input[type="checkbox"] {
-    margin-right: 5px;
-}
-
-.results {
-    flex: 1; /* Allow results to take up remaining space */
-    padding: 20px;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-    box-sizing: border-box;
-    min-width: 0; /* Important for flexbox to work correctly */
-}
-
-.bus-results-container {
-    border: none;
-    padding: 0;
-    margin: 0;
-    box-shadow: none;
-    overflow-x: auto;
-}
-
-.bus-results-container table {
-    width: 100%;
-    border-collapse: collapse;
-}
-.bus-results-container {
-    border: none;
-    padding: 0;
-    margin: 0;
-    box-shadow: snow;
-    padding-left: 300px; /* Make table container take full width */
-}
-
-.bus-results-container table {
-    width: 100%;
-    border-collapse: collapse;
-}
-.bus-results-container th,
-.bus-results-container td {
-    padding: 8px;
+table {
+    width: auto; 
+    height: auto;/* Adjust width as needed */
+    border: 1px solid whitesmoke;
+   
+  }
+  
+  th, td {
     text-align: left;
-    border-bottom: 1px solid #ddd;
-    white-space: nowrap;
+    padding: 8px;
+  }
+  
+  th {
+    background-color: #dad5d5;
+  }
+  .table-container { 
+    max-height: 400px; /* Adjust the max-height value as needed */
+    overflow-y: auto; /* Add a scrollbar to the table container itself if necessary */
 }
-
-.bus-results-container th {
-    font-weight: bold;
-}
-
-.bus-results-container tr:last-child td {
-    border-bottom: none;
-}
-.select-seat-button {
-    background-color: #2196F3; /* Example blue color */
+  .select-seat-button {
+    background-color: #007bff; /* Blue color */
     color: white;
-    padding: 6px 10px;
     border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    margin-bottom: 4px;
-}
-.select-seat-button:hover {
-    background-color: #1976D2;
-}
+    padding: 10px 20px;
+    border-radius: 5px;
+  }
