@@ -18,7 +18,7 @@ export function GstDetails({ gstDetails, setGstDetails }) {
     return (
       <div className="d-flex flex-column justify-content-center">
         <div className="container">
-          <h4 className="mt-5">GST Details:</h4>
+          <h4 className="">GST Details:</h4>
   
           {/* Radio Buttons */}
           <div className="mb-4 text-center">

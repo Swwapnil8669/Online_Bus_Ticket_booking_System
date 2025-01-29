@@ -8,10 +8,10 @@ export function PersonalDetails({ personalDetails, setPersonalDetails }) {
   };
 
   return (
-    <div className="container">
-      <h4 className="mt-5">Personal Details:</h4>
+    <div className="">
+      <h4 className="">Personal Details:</h4>
 
-      <div className="mt-5 d-flex justify-content-center">
+      <div className="d-flex justify-content-center">
         <div className="container">
           <div className="row">
             <div className="col">

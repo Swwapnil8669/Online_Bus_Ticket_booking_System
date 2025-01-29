@@ -112,18 +112,16 @@ export function OperatorDetails() {
       </h1>
 
       <div className="modal-dialog">
-        <div className="modal-content rounded-4 shadow" style={{ backgroundColor: '#f1f9ff' }}>
-          <div className="modal-header p-5 pb-4 border-bottom-0" style={{ backgroundColor: '#004085', color: 'white' }}>
+        <div className="modal-content shadow " style={{ backgroundColor: '#f1f9ff' }}>
+          <div className="modal-header p-5  border-bottom-0" style={{ backgroundColor: '#004085', color: 'white' }}>
             <h1 className="fw-bold mb-0 fs-2">Operator Registration</h1>
-            <button type="button" className="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+           
           </div>
-          <div className="modal-body p-5 pt-0">
+          <div className="container rounded-0" style={{ margin: 'auto' }}>
             {step === 0 && <PersonalDetails personalDetails={personalDetails} setPersonalDetails={setPersonalDetails} />}
             {step === 1 && <BankDetails bankDetails={bankDetails} setBankDetails={setBankDetails} />}
             {step === 2 && <GstDetails gstDetails={gstDetails} setGstDetails={setGstDetails} />}
-          </div>
-
-          <div className="modal-footer p-4 mt-3">
+            <div className="">
             <div className="d-flex justify-content-between w-100">
               {step > 0 && (
                 <button className="btn btn-secondary me-2" onClick={prevStep}>
@@ -144,6 +142,9 @@ export function OperatorDetails() {
               )}
             </div>
           </div>
+          </div>
+
+         
         </div>
       </div>
     </div>
