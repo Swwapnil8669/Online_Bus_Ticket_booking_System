@@ -1,8 +1,8 @@
 import React, { useState } from "react";
-import "./BusBooking.css";
 import BusSearch from "./BusSearch";
 import Filters from "./Filter";
-import { Navbar } from "./../nvabar";
+import { Navbar } from "../Nvabar";
+import './BusBooking.css';
 function BusBooking() {
   const [buses, setBuses] = useState([
     {

@@ -1,8 +1,11 @@
 import { Link } from "react-router-dom";
+import "./user/Navbar.css";
+
+
 export function Navbar() {
   return (
-    <div style={{ marginLeft: "30px", marginRight: "30px" }}>
-      <nav className="navbar navbar-expand-lg navbar-light bg-light shadow-sm rounded">
+    <div style={{ marginLeft: "30px", marginRight: "30px" }}> 
+     <nav className="navbar navbar-expand-lg shadow-sm rounde custom-navbar">
         <div className="container-fluid">
           <Link to="/">
             <img
