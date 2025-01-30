@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Luxury Bus Seat Layout</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+
+    <style>
+       
+        body {
+            background: linear-gradient(to right, #ff6b6b, #feca57);
+            font-family: 'Arial', sans-serif;
+        }
+
+        .bus-container {
+            max-width: 650px;
+            margin: 40px auto;
+            background: #fff;
+            padding: 25px;
+            border-radius: 20px;
+            box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.2);
+            border: 8px solid #222;
+            position: relative;
+            text-align: center;
+        }
+
+        .bus-title {
+            font-size: 26px;
+            font-weight: bold;
+            color: #222;
+            margin-bottom: 20px;
+        }
+
+        .seat {
+            width: 50px;
+            height: 50px;
+            margin: 8px;
+            display: inline-block;
+            border-radius: 12px;
+            text-align: center;
+            line-height: 50px;
+            font-weight: bold;
+            cursor: pointer;
+            border: 3px solid #444;
+            transition: 0.3s ease-in-out;
+            box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.15);
+        }
+
+        .available {
+            background: #f8f9fa;
+            color: #222;
+        }
+
+        .available:hover {
+            background: #28a745;
+            color: white;
+            transform: scale(1.1);
+        }
+
+        .unavailable {
+            background: #d9534f;
+            color: white;
+            cursor: not-allowed;
+            box-shadow: none;
+        }
+
+        .selected {
+            background: #007bff;
+            color: white;
+            transform: scale(1.1);
+        }
+
+        .upper-deck, .lower-deck {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .deck-title {
+            font-size: 20px;
+            font-weight: bold;
+            color: #555;
+            margin-bottom: 10px;
+        }
+
+        .driver-seat {
+            width: 60px;
+            height: 60px;
+            background: black;
+            color: white;
+            text-align: center;
+            line-height: 60px;
+            font-weight: bold;
+            border-radius: 50%;
+            position: absolute;
+            right: 20px;
+            top: 10px;
+            font-size: 20px;
+        }
+
+      
+        @media (max-width: 768px) {
+            .bus-container {
+                max-width: 90%;
+            }
+            .seat {
+                width: 40px;
+                height: 40px;
+                line-height: 40px;
+                font-size: 14px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="bus-container">
+        <div class="bus-title">Luxury Sleeper Bus Layout</div>
+        <div class="driver-seat">🚌</div>
+
+       
+        <div class="upper-deck">
+            <div class="deck-title">Upper Deck</div>
+            <div class="row justify-content-center">
+                <div class="col-auto">
+                    <div class="seat available" onclick="selectSeat(this)">U1</div>
+                    <div class="seat unavailable">U2</div>
+                    <div class="seat available" onclick="selectSeat(this)">U3</div>
+                </div>
+                <div class="col-auto">
+                    <div class="seat available" onclick="selectSeat(this)">U4</div>
+                    <div class="seat unavailable">U5</div>
+                    <div class="seat available" onclick="selectSeat(this)">U6</div>
+                </div>
+                <div class="col-auto">
+                    <div class="seat available" onclick="selectSeat(this)">U7</div>
+                    <div class="seat unavailable">U8</div>
+                    <div class="seat available" onclick="selectSeat(this)">U9</div>
+                </div>
+                <div class="col-auto">
+                    <div class="seat available" onclick="selectSeat(this)">U7</div>
+                    <div class="seat unavailable">U8</div>
+                    <div class="seat available" onclick="selectSeat(this)">U9</div>
+                </div>
+            </div>
+        </div>
+
+        <hr>
+ 
+        <div class="lower-deck">
+            <div class="deck-title">Lower Deck</div>
+            <div class="row justify-content-center">
+                <div class="col-auto">
+                    <div class="seat available" onclick="selectSeat(this)">L1</div>
+                    <div class="seat unavailable">L2</div>
+                    <div class="seat available" onclick="selectSeat(this)">L3</div>
+                </div>
+                <div class="col-auto">
+                    <div class="seat available" onclick="selectSeat(this)">L4</div>
+                    <div class="seat unavailable">L5</div>
+                    <div class="seat available" onclick="selectSeat(this)">L6</div>
+                </div>
+                <div class="col-auto">
+                    <div class="seat available" onclick="selectSeat(this)">L7</div>
+                    <div class="seat unavailable">L8</div>
+                    <div class="seat available" onclick="selectSeat(this)">L9</div>
+                </div>
+                <div class="col-auto">
+                    <div class="seat available" onclick="selectSeat(this)">L7</div>
+                    <div class="seat unavailable">L8</div>
+                    <div class="seat available" onclick="selectSeat(this)">L9</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function selectSeat(seat) {
+            if (!seat.classList.contains("unavailable")) {
+                seat.classList.toggle("selected");
+            }
+        }
+    </script>
+
+</body>
+</html>
