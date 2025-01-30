@@ -1,5 +1,5 @@
 
-import { Navbar } from '../nvabar';
+import { Navbar } from '../Nvabar';
 import Footer from "./Fotter";
 import  BusSearch from './../user/BusSearch';
 import './box.css';
