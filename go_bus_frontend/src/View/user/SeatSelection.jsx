@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
 import './SeatSelection.css'; // Import your CSS file
+import { Link } from 'react-router-dom';
+
 
 function SeatSelection() {
   const [selectedSeats, setSelectedSeats] = useState([]);
@@ -70,10 +72,11 @@ function SeatSelection() {
         <h2>Upper Deck</h2>
         {renderSeats('upper', seatData.upper)}
       </div>
-
+<Link to="/selectSeat">
       <button className="proceed-button" disabled={selectedSeats.length === 0}>
         Proceed
       </button>
+      </Link>
     </div>
   );
 }

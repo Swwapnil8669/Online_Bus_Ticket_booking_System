@@ -37,7 +37,7 @@ export function OperatorNavbar() {
                 </Link>
               </li>
               <li className="nav-item">
-                <a className="nav-link text-dark fs-5" href="#">
+                <a className="nav-link text-dark fs-5" href="#about">
                   About
                 </a>
               </li>
@@ -47,7 +47,7 @@ export function OperatorNavbar() {
                 </a>
               </li>
               <li className="nav-item">
-                <a className="nav-link text-dark fs-5" href="#">
+                <a className="nav-link text-dark fs-5" href="#about">
                   Help
                 </a>
               </li>
