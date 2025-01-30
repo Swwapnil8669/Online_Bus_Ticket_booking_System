@@ -3,7 +3,8 @@ import BusSearch from "./BusSearch";
 import Filters from "./Filter";
 import { Navbar } from "../nvabar";
 import './BusBooking.css';
-function BusBooking() {
+import SeatSelection from "./SeatSelection";
+function SeatBooking() {
   const [buses, setBuses] = useState([
    
     {
@@ -14,79 +15,6 @@ function BusBooking() {
       seats: Array(20).fill(false),
     },
 
-    {
-      operator: "Operator B",
-      departure: "10:00 AM",
-      arrival: "6:00 PM",
-      price: "$60",
-      seats: Array(20).fill(false),
-    },
-    {
-      operator: "Operator A",
-      departure: "9:00 AM",
-      arrival: "5:00 PM",
-      price: "$50",
-      seats: Array(20).fill(false),
-    },
-    {
-      operator: "Operator B",
-      departure: "10:00 AM",
-      arrival: "6:00 PM",
-      price: "$60",
-      seats: Array(20).fill(false),
-    },
-
-    {
-      operator: "Operator B",
-      departure: "10:00 AM",
-      arrival: "6:00 PM",
-      price: "$60",
-      seats: Array(20).fill(false),
-    },
-    {
-      operator: "Operator A",
-      departure: "9:00 AM",
-      arrival: "5:00 PM",
-      price: "$50",
-      seats: Array(20).fill(false),
-    },
-    {
-      operator: "Operator B",
-      departure: "10:00 AM",
-      arrival: "6:00 PM",
-      price: "$60",
-      seats: Array(20).fill(false),
-    },
-
-    {
-      operator: "Operator B",
-      departure: "10:00 AM",
-      arrival: "6:00 PM",
-      price: "$60",
-      seats: Array(20).fill(false),
-    },
-    {
-      operator: "Operator A",
-      departure: "9:00 AM",
-      arrival: "5:00 PM",
-      price: "$50",
-      seats: Array(20).fill(false),
-    },
-    {
-      operator: "Operator B",
-      departure: "10:00 AM",
-      arrival: "6:00 PM",
-      price: "$60",
-      seats: Array(20).fill(false),
-    },
-
-    {
-      operator: "Operator B",
-      departure: "10:00 AM",
-      arrival: "6:00 PM",
-      price: "$60",
-      seats: Array(20).fill(false),
-    },
   ]);
   return (
     <div>
@@ -113,7 +41,6 @@ function BusBooking() {
                   <th>Arrival</th>
                   <th>Rating</th>
                   <th>Price</th>
-                  <th>Select Seats</th>
                 </tr>
               </thead>
               <tbody>
@@ -133,14 +60,13 @@ function BusBooking() {
                       <br />
                       {bus.seatsLeft} Seats Left
                     </td>
-                    <td>
-                      <button>Select Seat</button>
-                      <br />
-                    </td>
                   </tr>
                 ))}
               </tbody>
             </table>
+            <div>
+                <SeatSelection/>
+              </div>
           </div>
         </div>
       </div>
@@ -148,4 +74,4 @@ function BusBooking() {
   );
 }
 
-export default BusBooking;
+export default SeatBooking;
