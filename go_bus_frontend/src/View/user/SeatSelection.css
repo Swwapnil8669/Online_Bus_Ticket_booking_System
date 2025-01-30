@@ -1,0 +1,45 @@
+.seat {
+  width: 30px;
+  height: 30px;
+  margin: 5px;
+  border: 1px solid #ccc;
+  cursor: pointer;
+  display: inline-block; /* To allow them to sit side by side */
+ 
+}
+
+.available {
+  background-color: #fff;
+}
+
+.unavailable {
+  background-color: #ddd;
+  cursor: default;
+}
+
+.female {
+  background-color: pink;
+}
+
+.selected {
+  background-color: lightgreen; /* Or any other visual cue */
+}
+
+.deck {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr); /* Adjust as needed */
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.legend {
+  display: flex;
+  gap: 20px;
+  margin-bottom: 20px;
+}
