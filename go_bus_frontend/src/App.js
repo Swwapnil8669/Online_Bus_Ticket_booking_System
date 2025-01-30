@@ -8,7 +8,7 @@ import ForgotPassword from "./View/user/forgot_password";
 import BusBooking from "./View/user/BusBooking";
 import BusSearch from "./View/user/BusSearch";
 import SeatBooking from "./View/user/SeatBooking";
-
+import AddBus from "./View/Bus/AddBus";
 
 
 function App() {
@@ -23,7 +23,7 @@ function App() {
       <Route path="BusBooking" element={<BusBooking/>}/>
       <Route path="BusSearch" element={<BusSearch/>}/>
       <Route path="SeatBooking" element={<SeatBooking/>}/>
-
+<Route path="addBus" element={<AddBus/>}/>
       </Routes>
     
   );
