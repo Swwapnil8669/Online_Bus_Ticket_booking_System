@@ -6,11 +6,11 @@ import { Routes, Route } from "react-router-dom";
 import Home from "./View/Home/home";
 import ForgotPassword from "./View/user/forgot_password";
 import BusBooking from "./View/user/BusBooking";
-import BusSearch from "./View/user/BusSearch";
 import SeatBooking from "./View/user/SeatBooking";
 import AddBus from "./View/Bus/AddBus";
 
 import OperatorHome from "./View/operator/OperatorHome";
+import OperatorBuses from './View/Bus/OperatorBuses';
 
 
 
@@ -26,9 +26,9 @@ function App() {
       <Route path="/" element ={<Home/>}/>
       <Route path="forgot-password" element ={<ForgotPassword/>}/>
       <Route path="BusBooking" element={<BusBooking/>}/>
-      <Route path="BusSearch" element={<BusSearch/>}/>
       <Route path="SeatBooking" element={<SeatBooking/>}/>
 <Route path="addBus" element={<AddBus/>}/>
+<Route path="yourBuses" element={<OperatorBuses/>}/>
       </Routes>
     
   );

@@ -3,6 +3,7 @@ import BusSearch from "./BusSearch";
 import Filters from "./Filter";
 import { Navbar } from "../nvabar";
 import './BusBooking.css';
+import { Link } from "react-router-dom";
 function BusBooking() {
   const [buses, setBuses] = useState([
    
@@ -134,7 +135,9 @@ function BusBooking() {
                       {bus.seatsLeft} Seats Left
                     </td>
                     <td>
+                      <Link >
                       <button>Select Seat</button>
+                      </Link>
                       <br />
                     </td>
                   </tr>

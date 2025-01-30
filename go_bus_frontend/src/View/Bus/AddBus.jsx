@@ -11,7 +11,7 @@ const AddBus = () => {
           <BusAmenities />
           <BusSchedules />
           <div className="text-center mt-4">
-            <button className="btn btn-primary">Submit</button>
+            <button className="btn btn-primary" style={{width:"30%"}}>Add Bus</button>
           </div>
         </div>
       </div>
