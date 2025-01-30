@@ -2,6 +2,7 @@ import { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import "./forgotPassword.css";
 import { toast } from "react-toastify";
+import { updatePassword } from "../../services/user";
 
 function ForgotPassword() {
   const [email, setEmail] = useState("");
@@ -23,7 +24,7 @@ function ForgotPassword() {
     } else if (newPassword !== confirmPassword) {
       toast.error("Passwords do not match");
     } else {
-       
+      const result = await updatePassword(newPassword , otp)
       toast.success("Password reset successful");
        
     }

@@ -8,6 +8,7 @@ import "react-toastify/dist/ReactToastify.css";
 export function OperatorDetails() {
   const [step, setStep] = useState(0);
 
+  
   const [personalDetails, setPersonalDetails] = useState({
     travelName: "",
     city: "",

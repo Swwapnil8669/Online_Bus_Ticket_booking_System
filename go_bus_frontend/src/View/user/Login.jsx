@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { toast } from "react-toastify";
+import { log_in } from "../../services/user";
 
 function Login() {
   const [email, setEmail] = useState("");
@@ -13,6 +14,7 @@ function Login() {
     } else if (password.length === 0) {
       toast.error("Please enter password");
     } else {
+      const result = await log_in(email, password)
       navigate("/");
     }
   };

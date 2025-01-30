@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { toast } from "react-toastify";
+import {register} from "../../services/user"
 
 function Register() {
   const [name, setName] = useState("");
@@ -23,6 +24,7 @@ function Register() {
     } else if (phone.length === 0) {
       toast.error("Please enter your phone number");
     } else {
+      const result = await register(name,  email, password, phone)
       navigate("/login");
     }
   };
