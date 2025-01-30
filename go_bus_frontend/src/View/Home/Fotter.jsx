@@ -3,7 +3,8 @@ import './Footer.css';
 
 const Footer = () => {
   return (
-    <footer className="footer-container">
+    <div id="about">
+    <footer className="footer-container" >
       <div className="footer-grid">
         {/* GoBus Info */}
         <div>
@@ -56,6 +57,7 @@ const Footer = () => {
         <h6>© 2025 GoBus India Pvt Ltd. All rights reserved</h6>
       </div>
     </footer>
+    </div>
   );
 };
 

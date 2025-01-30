@@ -37,19 +37,19 @@ export function Navbar() {
                 </Link>
               </li>
               <li className="nav-item">
-                <Link className="nav-link text-dark fs-5" to="">
+                <a className="nav-link text-dark fs-5" href="#about">
                   About
-                </Link>
+                </a>
               </li>
               <li className="nav-item">
-                <Link className="nav-link text-dark fs-5" to="">
+                <a className="nav-link text-dark fs-5" href="#">
                   Language
-                </Link>
+                </a>
               </li>
               <li className="nav-item">
-                <Link className="nav-link text-dark fs-5" to="">
+                <a className="nav-link text-dark fs-5" href="#about">
                   Help
-                </Link>
+                </a>
               </li>
             </ul>
 
