@@ -8,6 +8,7 @@ import ForgotPassword from "./View/user/forgot_password";
 import BusBooking from "./View/user/BusBooking";
 import BusSearch from "./View/user/BusSearch";
 import SeatBooking from "./View/user/SeatBooking";
+import OperatorHome from "./View/operator/OperatorHome";
 
 
 
@@ -16,6 +17,7 @@ function App() {
     
     <Routes>
       <Route path="operator/Details" element ={<OperatorDetails/>}/>
+      <Route path="OperatorHome" element={<OperatorHome/>}/>
       <Route path="login" element ={<Login/>}/>
       <Route path="register" element ={<Register/>}/>
       <Route path="/" element ={<Home/>}/>
