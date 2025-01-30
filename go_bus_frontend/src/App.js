@@ -10,12 +10,17 @@ import BusSearch from "./View/user/BusSearch";
 import SeatBooking from "./View/user/SeatBooking";
 import AddBus from "./View/Bus/AddBus";
 
+import OperatorHome from "./View/operator/OperatorHome";
+
+
+
 
 function App() {
   return (
     
     <Routes>
       <Route path="operator/Details" element ={<OperatorDetails/>}/>
+      <Route path="OperatorHome" element={<OperatorHome/>}/>
       <Route path="login" element ={<Login/>}/>
       <Route path="register" element ={<Register/>}/>
       <Route path="/" element ={<Home/>}/>
