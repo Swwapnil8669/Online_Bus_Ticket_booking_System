@@ -1,26 +1,45 @@
 import React from 'react';
 import './OperatorHome.css';  
+import { OperatorNavbar } from './../Navbar/OperatorNavbar';
+import { Link } from 'react-router-dom';
+import Footer from './../Home/Fotter';
 
 function OperatorHome() {
   return (
     <div>
-      
-      <div className="operator-home">
-      <img src= "./img/bus.jpg" alt="Bus" className="background-image" /> 
-      <div className="overlay" style={{width:"100px", paddingLeft:"90%"}}>
-      <a href="#" class="btn btn-secondary btn-lg disabled" tabindex="-1" role="button" aria-disabled="true">Logout</a>
-      <ul style={{paddingRight:"20px"}}>
-            <li><a href="" target='t1'>AddBus</a></li>
-            <li><a href="" target='t1'>Bus Shedule</a></li>
-          </ul>
+    <div
+      className="bg"
+      style={{
+        backgroundImage: "url('/img/bus.jpg')",
+        height: "100vh",
+        width: "100%",
+        backgroundSize: "cover",
+        backgroundPosition: "center",
+        backgroundRepeat: "no-repeat",
+      }}
+    ><div className='p-4'>
+      <OperatorNavbar />
       </div>
-      <div className="overlay"> 
-        <img src="./img/GoBuslogo.png" alt="Logo" className="logo" />
-        <div id="d2" style={{backgroundColor:"white",height:"1050px"}}>
-            <iframe id="t1" name='t1' height="100%" width="100%"></iframe>
+      <div className="content">
+        <h1 className="heading">Welcome Operator</h1>
+        <p className="para">Manage your buses here</p>
+
+        <div className='mt-4' >
+          <Link to="/yourBuses">
+          <button style={{color:"black", backgroundColor:"skyblue", width:"30%"}} className="btn">Your Buses</button>
+          </Link>
+        </div>
+        <div className='mt-4' >
+          <Link to="/addbus">
+          <button style={{color:"black", backgroundColor:"skyblue", width:"30%"}} className="btn">Add Bus</button>
+          </Link>
         </div>
       </div>
-      </div>
+      <div className='fixed-bottom' style={{width:"100%"}} >
+    <Footer/>
+    </div>
+    </div >
+    
     </div>
   );
 }

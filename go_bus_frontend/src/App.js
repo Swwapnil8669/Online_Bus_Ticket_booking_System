@@ -11,6 +11,7 @@ import SeatBooking from "./View/user/SeatBooking";
 import AddBus from "./View/Bus/AddBus";
 
 import OperatorHome from "./View/operator/OperatorHome";
+import OperatorBuses from './View/Bus/OperatorBuses';
 
 
 
@@ -29,6 +30,7 @@ function App() {
       <Route path="BusSearch" element={<BusSearch/>}/>
       <Route path="SeatBooking" element={<SeatBooking/>}/>
 <Route path="addBus" element={<AddBus/>}/>
+<Route path="yourBuses" element={<OperatorBuses/>}/>
       </Routes>
     
   );
