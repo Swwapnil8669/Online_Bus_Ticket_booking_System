@@ -1,10 +1,10 @@
 import React from "react";
-import './Footer.css';
+import './OperatorFooter.css';
 
-const Footer = () => {
+const OperatorFooter = () => {
   return (
     <div id="about">
-    <footer className="footer-container" >
+    <footer>
       <div className="footer-grid">
         {/* GoBus Info */}
         <div>
@@ -61,4 +61,4 @@ const Footer = () => {
   );
 };
 
-export default Footer;
+export default OperatorFooter;

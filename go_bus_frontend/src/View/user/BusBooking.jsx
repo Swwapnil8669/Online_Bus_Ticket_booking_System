@@ -4,7 +4,16 @@ import Filters from "./Filter";
 import { Navbar } from "../nvabar";
 import './BusBooking.css';
 import { Link } from "react-router-dom";
+import { useNavigate } from 'react-router-dom';
+
 function BusBooking() {
+  const navigate = useNavigate();
+
+  const toSearch= async () => {
+    navigate("./SeatBooking");
+  };
+
+
   const [buses, setBuses] = useState([
    
     {
@@ -135,9 +144,9 @@ function BusBooking() {
                       {bus.seatsLeft} Seats Left
                     </td>
                     <td>
-                      <Link >
-                      <button>Select Seat</button>
-                      </Link>
+                      
+                      <button onClick={toSearch}>Select Seat</button>
+                      
                       <br />
                     </td>
                   </tr>

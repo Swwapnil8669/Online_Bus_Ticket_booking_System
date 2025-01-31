@@ -11,6 +11,7 @@ import AddBus from "./View/Bus/AddBus";
 
 import OperatorHome from "./View/operator/OperatorHome";
 import OperatorBuses from './View/Bus/OperatorBuses';
+import OperatorFooter from "./View/operator/OperatorFotter";
 
 
 
@@ -26,9 +27,10 @@ function App() {
       <Route path="/" element ={<Home/>}/>
       <Route path="forgot-password" element ={<ForgotPassword/>}/>
       <Route path="BusBooking" element={<BusBooking/>}/>
-      <Route path="SeatBooking" element={<SeatBooking/>}/>
+      <Route path="BusBooking/SeatBooking" element={<SeatBooking/>}/>
 <Route path="addBus" element={<AddBus/>}/>
 <Route path="yourBuses" element={<OperatorBuses/>}/>
+<Route path="OperatorFooter" element={<OperatorFooter/>}/>
       </Routes>
     
   );

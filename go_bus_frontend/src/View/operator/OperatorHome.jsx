@@ -2,7 +2,7 @@ import React from 'react';
 import './OperatorHome.css';  
 import { OperatorNavbar } from './../Navbar/OperatorNavbar';
 import { Link } from 'react-router-dom';
-import Footer from './../Home/Fotter';
+import Footer from './OperatorFotter';
 
 function OperatorHome() {
   return (
@@ -21,8 +21,8 @@ function OperatorHome() {
       <OperatorNavbar />
       </div>
       <div className="content">
-        <h1 className="heading">Welcome Operator</h1>
-        <p className="para">Manage your buses here</p>
+        <h1 className="heading" style={{color:"white"}}>Welcome Operator</h1>
+        <p className="para"style={{color:"white"}}>Manage your buses here</p>
 
         <div className='mt-4' >
           <Link to="/yourBuses">

@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
-import './SeatSelection.css'; // Import your CSS file
+import './SeatSelection.css';
 import { Link } from 'react-router-dom';
-
 
 function SeatSelection() {
   const [selectedSeats, setSelectedSeats] = useState([]);
@@ -14,7 +13,7 @@ function SeatSelection() {
     upper: [
       [{ available: false, female: false }, { available: true, female: false }, { available: true, female: false }, { available: true, female: false }, { available: false, female: true }],
       [{ available: true, female: false }, { available: true, female: false }, { available: true, female: false }, { available: true, female: false }, { available: false, female: false }]
-    ]
+    ],
   };
 
   const handleSeatClick = (deckName, row, col) => {
@@ -33,7 +32,7 @@ function SeatSelection() {
   const renderSeats = (deckName, deckData) => (
     <div className="deck">
       {deckData.map((row, rowIndex) => (
-        <div key={rowIndex} className="seat-row"> {/* Add a row container */}
+        <div key={rowIndex} className="seat-row">
           {row.map((seat, colIndex) => {
             const seatKey = `${deckName}-${rowIndex}-${colIndex}`;
             const isSelected = selectedSeats.includes(seatKey);
@@ -44,7 +43,7 @@ function SeatSelection() {
                 className={`seat ${seat.available ? 'available' : 'unavailable'} ${seat.female ? 'female' : ''} ${isSelected ? 'selected' : ''}`}
                 onClick={() => handleSeatClick(deckName, rowIndex, colIndex)}
               >
-                {seat.available ? 'Π' : ''} {/* Display Π for available seats */}
+                {seat.available ? 'Π' : ''}
               </div>
             );
           })}
@@ -52,7 +51,6 @@ function SeatSelection() {
       ))}
     </div>
   );
-
 
   return (
     <div className="container">
@@ -72,10 +70,10 @@ function SeatSelection() {
         <h2>Upper Deck</h2>
         {renderSeats('upper', seatData.upper)}
       </div>
-<Link to="/selectSeat">
-      <button className="proceed-button" disabled={selectedSeats.length === 0}>
-        Proceed
-      </button>
+      <Link to="/selectSeat">
+        <button className="proceed-button" disabled={selectedSeats.length === 0}>
+          Proceed
+        </button>
       </Link>
     </div>
   );

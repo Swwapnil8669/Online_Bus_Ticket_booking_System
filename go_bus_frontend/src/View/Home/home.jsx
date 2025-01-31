@@ -39,7 +39,7 @@ function Home() {
       
       <div className="container">
       <div className="content">
-        <h1>ENJOY THE APP!</h1>
+        <h1>ENJOY THE JOURNEY!</h1>
         <ul className="features">
          
         <FaCheckCircle className='text-success'/>
