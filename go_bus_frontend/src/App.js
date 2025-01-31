@@ -11,8 +11,12 @@ import AddBus from "./View/Bus/AddBus";
 
 import OperatorHome from "./View/operator/OperatorHome";
 import OperatorBuses from './View/Bus/OperatorBuses';
+<<<<<<< HEAD
+import OperatorFooter from "./View/operator/OperatorFotter";
+=======
 import PassengerDetails from "./View/PassengerDetails/PassengerDetails";
 import Payment from "./View/Payment/Payment";
+>>>>>>> 67fbf02965f47f28a614da51c128c55daa637bd0
 
 
 
@@ -28,11 +32,18 @@ function App() {
       <Route path="/" element ={<Home/>}/>
       <Route path="forgot-password" element ={<ForgotPassword/>}/>
       <Route path="BusBooking" element={<BusBooking/>}/>
+<<<<<<< HEAD
+      <Route path="BusBooking/SeatBooking" element={<SeatBooking/>}/>
+<Route path="addBus" element={<AddBus/>}/>
+<Route path="yourBuses" element={<OperatorBuses/>}/>
+<Route path="OperatorFooter" element={<OperatorFooter/>}/>
+=======
       <Route path="SeatBooking" element={<SeatBooking/>}/>
       <Route path="addBus" element={<AddBus/>}/>
       <Route path="yourBuses" element={<OperatorBuses/>}/>
       <Route path="PassengerDetails" element={<PassengerDetails/>}/>
       <Route path="Payment"element={<Payment/>}/>
+>>>>>>> 67fbf02965f47f28a614da51c128c55daa637bd0
       </Routes>
     
   );

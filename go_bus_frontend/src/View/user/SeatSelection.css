@@ -1,77 +1,88 @@
-/* SeatSelection.css */.seat {
-  width: 30px;
-  height: 30px;
-  margin: 5px;
-  border: 1px solid #ccc;
-  cursor: pointer;
-  display: inline-block;
-}
-.available {
-  background-color: #fff;
-}
-.unavailable {
-  background-color: #ddd;
-  cursor: default;
-}
-.female {
-  background-color: pink;
-}
-.selected {
-  background-color: lightgreen;
-}
-.deck {
-  display: grid;
-  grid-template-columns: repeat(6, 1fr); /* Adjust as needed */
-  gap: 10px;
-  margin-bottom: 20px;
-  width: 100%; /* Make sure deck takes full width */
-}
+/* SeatSelection.css */
 .container {
   display: flex;
   flex-direction: column;
   align-items: center; /* Center horizontally */
-  justify-content: center; /* Center vertically */
-  flex-grow: 1; /* Allow container to grow and center */
-  width: 90%;
-  max-width: 1000px;
-  margin: 20px auto; /* Center horizontally with top/bottom margin */
-  padding: 40px;
-  border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-.legend {
-  display: flex;
-  gap: 20px;
-  margin-bottom: 10px;
+  padding: 20px;
+  font-family: sans-serif;
 }
 
-body {
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh;
-  margin: 0; /* Remove default body margins */
-}
 .bus-layout {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  width: 100%; /* Ensure bus layout takes full container width */
+  flex-direction: column; /* Arrange decks vertically */
+  gap: 20px; /* Space between decks */
+  margin-bottom: 20px; /* Space before button */
+
 }
-.lower-deck,.upper-deck {
-  width: 100%;  /* Decks take full width of.bus-layout */
-}
-.proceed-button {
-  margin-top: 20px;
-  padding: 10px 20px;
-  background-color: #4CAF50;
-  color: white;
-  border: none;
-  cursor: pointer;
+
+.deck {
+  display: flex;
+  flex-direction: column; /* Arrange rows in a column */
+  border: 1px solid #ccc; /* Optional border for the deck */
+  padding: 10px;
   border-radius: 5px;
 }
 
-/* Styles for the "Click on an Available..." message */
-.container > p { /* Target the direct child <p> of.container */
-  margin-bottom: 20px; /* Add some space below the message */
-  text-align: center; /* Center the text */
+.seat-row {
+  display: flex; /* Arrange seats in a row */
+  gap: 5px; /* Space between seats */
+  margin-bottom: 5px; /* Space between rows */
+}
+
+.seat {
+  width: 30px; /* Adjust seat size */
+  height: 30px;
+  border: 1px solid #ccc;
+  cursor: pointer;
+  display: flex;
+  justify-content: center; /* Center the 'Π' */
+  align-items: center;
+  border-radius: 5px;
+}
+
+.available {
+  background-color: #e0e0e0; /* Light gray for available seats */
+}
+
+.unavailable {
+  background-color: #ccc; /* Gray for unavailable seats */
+  cursor: default; /* No pointer for unavailable seats */
+}
+
+.female {
+  background-color: #f0c0f0; /* Light pink for female seats */
+}
+
+.selected {
+  background-color: lightgreen; /* Green for selected seats */
+}
+
+.legend {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.legend .seat {
+  border: none; /* Remove border from legend seats */
+}
+
+
+.proceed-button {
+  background-color: #007bff;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.proceed-button:disabled {
+  background-color: #ccc;
+  cursor: default;
+}
+
+h1, h2, p {
+  text-align: center; /* Center the headings and paragraph */
+  margin-bottom: 10px; /* Add some bottom margin */
 }
