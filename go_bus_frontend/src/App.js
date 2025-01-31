@@ -11,6 +11,8 @@ import AddBus from "./View/Bus/AddBus";
 
 import OperatorHome from "./View/operator/OperatorHome";
 import OperatorBuses from './View/Bus/OperatorBuses';
+import PassengerDetails from "./View/PassengerDetails/PassengerDetails";
+import Payment from "./View/Payment/Payment";
 
 
 
@@ -27,8 +29,10 @@ function App() {
       <Route path="forgot-password" element ={<ForgotPassword/>}/>
       <Route path="BusBooking" element={<BusBooking/>}/>
       <Route path="SeatBooking" element={<SeatBooking/>}/>
-<Route path="addBus" element={<AddBus/>}/>
-<Route path="yourBuses" element={<OperatorBuses/>}/>
+      <Route path="addBus" element={<AddBus/>}/>
+      <Route path="yourBuses" element={<OperatorBuses/>}/>
+      <Route path="PassengerDetails" element={<PassengerDetails/>}/>
+      <Route path="Payment"element={<Payment/>}/>
       </Routes>
     
   );
