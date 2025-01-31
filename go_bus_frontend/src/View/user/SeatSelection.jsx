@@ -72,7 +72,7 @@ function SeatSelection() {
         <h2>Upper Deck</h2>
         {renderSeats('upper', seatData.upper)}
       </div>
-<Link to="/selectSeat">
+<Link to="/Payment">
       <button className="proceed-button" disabled={selectedSeats.length === 0}>
         Proceed
       </button>
