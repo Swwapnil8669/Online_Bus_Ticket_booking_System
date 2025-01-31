@@ -4,9 +4,13 @@ import { BankDetails } from "./bank_details";
 import { GstDetails } from "./gst_details";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import { registerOperatorDetails } from "../../services/Operator";
+import OperatorHome from './OperatorHome';
+import { useNavigate } from "react-router-dom";
 
 export function OperatorDetails() {
   const [step, setStep] = useState(0);
+  const navigate = useNavigate();
 
   
   const [personalDetails, setPersonalDetails] = useState({
@@ -84,7 +88,7 @@ export function OperatorDetails() {
     }
   };
 
-  const handleSubmit = () => {
+  const handleSubmit = async() => {
     if (validateStep()) {
      
     const data = {
@@ -92,7 +96,13 @@ export function OperatorDetails() {
       bankDetails,
       gstDetails,
     };
-    console.log("Data to submit:", data);
+    const result = await registerOperatorDetails(data);
+    if(result['status'] === 'success'){
+      alert('register successfully');
+      navigate('/OperatorHome');
+    }else{
+      alert(result['error']);
+    }
   }
 
     
