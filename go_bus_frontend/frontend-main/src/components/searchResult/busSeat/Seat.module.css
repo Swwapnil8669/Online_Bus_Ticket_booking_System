@@ -1,0 +1,37 @@
+
+/* 
+.outter { 
+    
+    width: 56px;
+    height: 18px;
+    position: relative;
+    border: 1px solid #979797;
+    border-radius: 2px;
+    box-sizing: border-box;
+    
+    cursor: pointer;
+} */
+.outter { 
+    
+    width: 56px;
+    height: 18px;
+    position: relative;
+    border: 1px solid #979797;
+    border-radius: 2px;
+    box-sizing: border-box;
+    
+    cursor: pointer;
+}
+.inner {
+    width: 1.5px;
+    height: 10px;
+    border: 1px solid #979797;
+    border-radius: 0.5px;
+    background-color: white;
+    position: absolute;
+    right: 5px;
+    top: 2px;
+    /* z-index: 1; */
+    cursor: pointer;
+}
+

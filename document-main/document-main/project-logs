@@ -1,0 +1,11 @@
+17/12/22
+    1. Normalisation for Search transaction was achieved.
+        1.1 We saw 1NF,2NF and even 3NF in the process.
+    2. Tables formed post Normalisation are :
+        2.1. Operator Table
+        2.2. Bus Table
+        2.3. Bus Schedule Table
+        2.4. Bus Type Table
+        2.5. Amenities Table
+
+    

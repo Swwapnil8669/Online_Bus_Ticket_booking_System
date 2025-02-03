@@ -1,0 +1,13 @@
+package com.bus.dao;
+
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.data.jpa.repository.Query;
+
+import com.bus.pojos.Operator;
+
+public interface OperatorDao extends JpaRepository<Operator, Long>{
+	@Query("select o from Operator o where o.operatorEmail=:operatorEmail and o.operatorPassword=:operatorPassword")
+	Operator authenticateOperator(String operatorEmail, String operatorPassword);
+	
+	
+}
