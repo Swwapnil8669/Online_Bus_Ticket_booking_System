@@ -2,6 +2,7 @@
 <section name="Workbench">
 	<section name="MavenProjectImportWizardPage">
 		<list key="rootDirectory">
+			<item value="S:\cdac\Online_Bus_Ticket_booking_System\go_bus_backend\go_bus_backend"/>
 			<item value="C:\Users\Asus\Desktop\projectgobus\Online_Bus_Ticket_booking_System\go_bus_backend"/>
 		</list>
 		<list key="projectNameTemplate">
