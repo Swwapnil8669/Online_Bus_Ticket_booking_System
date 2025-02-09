@@ -53,9 +53,14 @@ function AddBus() {
     }
 
     console.log("Final Form Data Before API Call:", formData); // Debugging
-
+ 
+    const token = sessionStorage['token']
     axios
-      .post(`http://localhost:8080/bus/operator/addbus/${operatorId}`, formData)
+      .post(`http://localhost:8080/bus/operator/addbus/${operatorId}`, formData,{
+        headers: {
+          token,
+        },
+      })
       .then((response) => {
         console.log("Add Bus API Response:", response.data);
         navigate("/operatorDashboard", { state: { responseOperator: location.state.operatorId } });

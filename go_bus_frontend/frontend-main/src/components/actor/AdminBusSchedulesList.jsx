@@ -14,7 +14,12 @@ function AdminBusSchedulesList() {
         console.log("---->", schedulesList)
     },[])
   const showBookings = (scheduleId)=>{
-    axios.get(`http://localhost:8080/bus/operator/bookings/${scheduleId}`,scheduleId)
+    const token = sessionStorage['token']
+    axios.get(`http://localhost:8080/bus/operator/bookings/${scheduleId}`,scheduleId,{
+        headers: {
+            token 
+            }
+    })
     .then((res)=> {
         var bookings = res.data;
         return bookings

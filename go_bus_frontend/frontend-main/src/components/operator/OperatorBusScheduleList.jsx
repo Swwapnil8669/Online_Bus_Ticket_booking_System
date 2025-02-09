@@ -27,8 +27,13 @@ function OperatorBusSchedulesList() {
       .catch();
   };
   const getScheduleList = (rtoRegNo) => {
+    const token = sessionStorage['token']
     axios
-      .get(`http://localhost:8080/bus/operator/schedule/${rtoRegNo}`, rtoRegNo)
+      .get(`http://localhost:8080/bus/operator/schedule/${rtoRegNo}`, rtoRegNo,{
+        headers: {
+     token
+        }
+      })
       .then((res) => {
         var schedulesList = res.data;
         setScheduleList(schedulesList);
@@ -38,10 +43,15 @@ function OperatorBusSchedulesList() {
   const deleteSchedule = (scheduleId) => {
     console.log("schedule id:", scheduleId);
     //bus/operator//deleteSchedule/{scheduleId}
+    const token = sessionStorage['token']
     axios
       .delete(
         `http://localhost:8080/bus/operator/deleteSchedule/${scheduleId}`,
-        scheduleId
+        scheduleId,{
+          headers: {
+            token
+          }
+        }
       )
       .then((res) => {
         var didDelete = res.data;

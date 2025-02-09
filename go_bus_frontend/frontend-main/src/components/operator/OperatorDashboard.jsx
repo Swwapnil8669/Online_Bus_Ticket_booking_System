@@ -13,8 +13,13 @@ function OperatorDashboard() {
 
   ///bus/operator/schedule/{rtoRegNo}
   const handleSeeSchedules = (rtoRegNo) => {
+    const token = sessionStorage['token']
     axios
-      .get(`http://localhost:8080/bus/operator/schedule/${rtoRegNo}`, rtoRegNo)
+      .get(`http://localhost:8080/bus/operator/schedule/${rtoRegNo}`, rtoRegNo,{
+        headers: {
+          token
+        }
+      })
       .then((res) => {
         var schedulesList = res.data;
         console.log(

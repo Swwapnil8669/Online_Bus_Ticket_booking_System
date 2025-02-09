@@ -23,8 +23,13 @@ function AdminBusList() {
   
     const openBusSchedules = (rtoRegNo) => {
         console.log(rtoRegNo)
+        const token = sessionStorage['token']
        // 8080/bus/operator/schedule/{rtoRegNo}
-        axios.get(`http://localhost:8080/bus/operator/schedule/${rtoRegNo}`,rtoRegNo)
+        axios.get(`http://localhost:8080/bus/operator/schedule/${rtoRegNo}`,rtoRegNo,{
+         headers: {
+         token 
+         }
+        })
         .then((res)=> {
             var schedulesList = res.data;
             console.log("response after gettig Buses from operatorId", schedulesList);

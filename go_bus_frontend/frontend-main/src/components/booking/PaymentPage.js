@@ -101,11 +101,15 @@ function PaymentPage() {
             obj.travellers = arr;
 
             console.log("objjjj and arr", obj, arr);
-
+            const token = sessionStorage['token']
             axios
               .post(
                 `http://localhost:8080/bus/book/${location.state.id}/${location.state.schedule.scheduleId}`,
-                obj
+                obj,{
+                  headers: {
+                    token
+                  }
+                }
               )
               .then((response) => {
                 console.log("reposne after post req: ", response);

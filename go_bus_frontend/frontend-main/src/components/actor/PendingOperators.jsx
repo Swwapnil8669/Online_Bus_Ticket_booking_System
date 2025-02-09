@@ -9,9 +9,13 @@ function PendingOperators({operator, key , setOperatorList, operatorList}) {
     
     const AllowOperator = () =>  {
         // 8080/bus/admin/approve/{operatorId}
-
+        const token = sessionStorage['token']
         axios
-        .get(`http://localhost:8080/bus/admin/approve/${operator.id}`,operator.id)
+        .get(`http://localhost:8080/bus/admin/approve/${operator.id}`,operator.id,{
+            headers: {
+                token
+            }
+        })
         .then((response) => {
             console.log(response.data);
            // var resData = response.data;
@@ -35,9 +39,13 @@ function PendingOperators({operator, key , setOperatorList, operatorList}) {
 
     //http://localhost:8080/bus/admin/{operatorId}
     const RejectOperator = () => {
-        
+        const token = sessionStorage['token']
         axios
-        .delete(`http://localhost:8080/bus/admin/${operator.id}`,operator.id)
+        .delete(`http://localhost:8080/bus/admin/${operator.id}`,operator.id,{
+            headers: {
+                token
+            }
+        })
         .then((response)=>{
             console.log("Operator with id : "+ operator.id +" is Rejected", response.data);
 

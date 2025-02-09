@@ -10,9 +10,13 @@ function ApprovedOperators({operator, key}) {
     
     const navigate = useNavigate();
     const openOperatorBusList = () => {
-
+        const token = sessionStorage['token']
 //8080/bus/operator/{operatorId}
-        axios.get(`http://localhost:8080/bus/operator/${operator.id}`,operator.id)
+        axios.get(`http://localhost:8080/bus/operator/${operator.id}`,operator.id,{
+            headers: {
+                token
+            }
+        })
         .then((res)=> {
             var busL = res.data;
             console.log("response after gettig Buses from operatorId", busL);
@@ -25,9 +29,13 @@ function ApprovedOperators({operator, key}) {
 //delete Operator -> [Admin has this authority]
 ////http://localhost:8080/bus/admin/{operatorId}
     const deleteOperatorBusList = () => {
-
+        const token = sessionStorage['token']
         axios
-        .delete(`http://localhost:8080/bus/admin/${operator.id}`,operator.id)
+        .delete(`http://localhost:8080/bus/admin/${operator.id}`,operator.id,{
+            headers: {
+                token
+            }
+        })
         .then((response)=>{
             console.log("Operator with id : "+ operator.id +" is Deleted", response.data);
         })

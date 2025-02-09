@@ -24,9 +24,14 @@ function AddSchedule() {
 
   const handleAddSchedule = (data) => {
     console.log("schedule obj", data);
+    const token = sessionStorage['token']
 
     axios
-      .post(`http://localhost:8080/bus/operator/addSchedule/${rtoRegNo}`, data)
+      .post(`http://localhost:8080/bus/operator/addSchedule/${rtoRegNo}`, data,{
+        headers: {
+          token
+        }
+      })
       .then((response) => {
         console.log("add bus schedule post response: ", response.data);
         let responseOperator = location.state.operator;
