@@ -20,8 +20,13 @@ function CustomerBookings() {
       "Your booking has been cancelled, the refund amount will be debited to your accout within 24 hours"
     );
     // /bus/customer/cancle/{bookingId}
+    const token = sessionStorage['token']
     axios
-      .get(`http://localhost:8080/bus/customer/cancle/${bookingId}`, bookingId)
+      .get(`http://localhost:8080/bus/customer/cancle/${bookingId}`,bookingId,{
+        headers: {
+            token,
+        }
+      })
       .then((res) => {
         console.log("response after deleting booking id", res, res.data);
         var filteredBookingList = bookingsList.map((b) => {
